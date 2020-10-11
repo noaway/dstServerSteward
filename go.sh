@@ -3,7 +3,7 @@
 #	饥荒linux系统服务器开服脚本
 #just for fun
 #History:
-#2016/11/12  欲醉无由   第一次完成
+#2020/10/10 noaway
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
@@ -324,7 +324,7 @@ function AddMod()
 				echo "该存档没有地下世界"
 				mod4=$[mod3+0]
 			fi
-			cd "./Steam/steamapps/common/DSTServer/mods"
+			cd "$HOME/Steam/steamapps/common/DSTServer/mods"
 				if [[ ! `grep "$ID1" dedicated_server_mods_setup.lua` ]]
 				then        
 					echo "ServerModSetup(\"$ID1\")" >> dedicated_server_mods_setup.lua
